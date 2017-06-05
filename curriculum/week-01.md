@@ -16,7 +16,7 @@ Outline
 
 - Special Breakfast at Academy
 - VP R&D Welcome Note
-- HR intro to Wix 
+- HR intro to Wix
 - Wix Org and Culture
 - Admin Errands
 - IT help/setup
@@ -29,7 +29,7 @@ Outline
 - Github 101
 - WixEd Videos - self learning and Playaround with the editor
 - Intro to Editor (Timeline)
-- Build a Wix Site 
+- Build a Wix Site
 - Intro to Web + Basic network traffic + browser (cookies)
 - BI and BA in Wix
 - Manage your business

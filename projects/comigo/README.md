@@ -18,7 +18,7 @@ Spec
 
 ### Week 1
 
-- Build the website based on the given design as close as possible 
+- Build the website based on the given design as close as possible
 
 ### Week 2
 
