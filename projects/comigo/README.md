@@ -16,14 +16,14 @@ Spec
 
 - Screenshots and videos available under `spec-assets` folder
 
-### Week 1
+### Phase 1
 
-- Build the website based on the given design as close as possible
+- Semantic HTML of the whole content, without styling at all
 
-### Week 2
+### Phase 2
 
 - ...
 
-### Week 3
+### Phase 3
 
 - ...
