@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="main-menu">
+      <!-- Dynamic content from JavaScript will go here -->
+    </nav>
+
+    <script>
+      function buildNavigation(navigation, underThisNode) {
+        const ul = document.createElement('ul');
+
+        for (const item of navigation) {
+          const li = document.createElement('li');
+
+          li.style.padding         = '4px 10px';
+          li.style.listStyle       = 'none';
+          li.style.backgroundColor = '#eee';
+
+          // If `href` exists - Create an <a> tag, otherwise a text node
+          if (item.href) {
+            const a     = document.createElement('a');
+            a.innerHTML = item.title;
+            a.href      = item.href;
+
+            li.appendChild(a);
+          }
+          else {
+            const itemText = document.createTextNode(item.title);
+            li.appendChild(itemText);
+          }
+
+          if (item.children) {
+            buildNavigation(item.children, li);
+          }
+
+          ul.appendChild(li);
+        }
+
+        underThisNode.appendChild(ul);
+
+        // Hiding and showing logic too complicated :-)
+      }
+    </script>
+    <script>
+      const navigation = [
+        {
+          title: 'Home',
+          href: '#1'
+        },
+        {
+          title: 'Courses',
+          children: [
+            { title: 'FED', href: '#2' },
+            {
+              title: 'UX',
+              children: [
+                { title: 'More FED', href: '#4' },
+                { title: 'More UX', href: '#5' }
+              ]
+            }
+          ]
+        },
+        {
+          title: 'About',
+          children: [
+            { title: 'Contact Us', href: '#2' },
+            { title: 'Location', href: '#3' }
+          ]
+        }
+      ];
+
+      buildNavigation(navigation, document.getElementById('main-menu'));
+    </script>
+  </body>
+</html>

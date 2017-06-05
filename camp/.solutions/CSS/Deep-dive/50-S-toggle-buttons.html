@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Buttons</title>
+  <style>
+    .switch-field {
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .switch-title {
+      margin-bottom: 6px;
+    }
+
+    .switch-field input {
+      display: none;
+    }
+
+    .switch-field label {
+      float: left;
+    }
+
+    .switch-field label {
+      display: inline-block;
+      width: 60px;
+      background-color: #e4e4e4;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      font-weight: normal;
+      text-align: center;
+      text-shadow: none;
+      padding: 6px 14px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+      transition: all 0.1s ease-in-out;
+    }
+
+    .switch-field label:hover {
+      cursor: pointer;
+    }
+
+    .switch-field input:checked + label {
+      background-color: #A5DC86;
+      box-shadow: none;
+    }
+
+    .switch-field label:first-of-type {
+      border-radius: 4px 0 0 4px;
+    }
+
+    .switch-field label:last-of-type {
+      border-radius: 0 4px 4px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="form">
+    <div class="switch-field">
+      <div class="switch-title">Do you like CSS?</div>
+      <input type="radio" id="switch_left" name="switch_2" value="yes" checked/>
+      <label for="switch_left">Yes</label>
+      <input type="radio" id="switch_right" name="switch_2" value="no" />
+      <label for="switch_right">No</label>
+    </div>
+
+    <div class="switch-field">
+      <div class="switch-title">Three fields?</div>
+      <input type="radio" id="switch_3_left" name="switch_3" value="yes" checked/>
+      <label for="switch_3_left">One</label>
+      <input type="radio" id="switch_3_center" name="switch_3" value="maybe" />
+      <label for="switch_3_center">Two</label>
+      <input type="radio" id="switch_3_right" name="switch_3" value="no" />
+      <label for="switch_3_right">Three</label>
+    </div>
+  </form>
+</body>
+
+</html>
+
+<!--
+  Create Toggle buttons using CSS.
+  (Do not modify the HTML)
+
+  Expected result: "50-toggle-buttons-preview.mp4"
+-->

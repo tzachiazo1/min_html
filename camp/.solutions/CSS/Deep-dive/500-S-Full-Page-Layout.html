@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Full page Layout</title>
+
+  <style>
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    header,
+    .main,
+    aside,
+    footer {
+      position: absolute;
+    }
+
+    header {
+      background: #4fc3f7;
+      width: 100%;
+      height: 80px;
+    }
+
+    .main,
+    aside {
+      top: 80px;
+      bottom: 60px;
+      overflow: auto;
+    }
+
+    .main {
+      background: #d4e157;
+      left: 25%;
+      right: 0;
+    }
+
+    aside {
+      background: #e6ee9c;
+      right: 75%;
+      left: 0;
+    }
+
+    footer {
+      background: #546e7a;
+      width: 100%;
+      bottom: 0;
+      height: 60px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header></header>
+
+  <main>
+    <aside></aside>
+
+    <article class="main"></article>
+  </main>
+
+  <footer></footer>
+
+</body>
+
+</html>
+
+
+<!--
+
+Create 2 a column layout based on: "expected/css-2-col-fullpage-layout.png"
+
+Requirements:
+- Use absolute position
+- Don't add height anywhere
+- Don't touch the HTML
+-->

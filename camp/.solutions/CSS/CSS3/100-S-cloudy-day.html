@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Cloudy Day</title>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        /* The container will also serve as the SKY */
+        background: url('grass.png') repeat-x bottom, linear-gradient(#C9DBE9, #FFF);
+      }
+
+      .cloud {
+        width: 200px;
+        height: 60px;
+        border-radius: 200px;
+      }
+
+      .cloud::before,
+      .cloud::after {
+        content: '';
+        width: 100px;
+        height: 80px;
+        top: -15px;
+        left: 10px;
+        border-radius: 100px;
+        transform: rotate(30deg);
+      }
+
+      .cloud::after {
+        width: 120px;
+        height: 120px;
+        top: -55px;
+        left: auto;
+        right: 15px;
+      }
+
+      .cloud,
+      .cloud::before,
+      .cloud::after {
+        background: #FFF;
+        box-shadow: 0 0 25px 0 white;
+        position: absolute;
+        transition: all 200ms linear;
+      }
+
+      .c1 {
+        top: 70px;
+        left: 5vw;
+        /* opacity proportional to the size */
+        opacity: 0.85;
+      }
+
+      .c1 .cloud {
+        transform: scale(0.85);
+      }
+
+      .c2 {
+        top: 160px;
+        left: 20vw;
+        opacity: 0.6;
+      }
+
+      .c2 .cloud {
+        transform: scale(0.6);
+      }
+
+      .c3 {
+        top: 100px;
+        left: 45vw;
+        opacity: 0.8;
+      }
+
+      .c3 .cloud {
+        transform: scale(0.8);
+      }
+
+      .c4 {
+        top: 210px;
+        left: 75vw;
+        opacity: 0.75;
+      }
+
+      .c4 .cloud {
+        transform: scale(0.75);
+      }
+
+      .c5 {
+        top: 50px;
+        left: 80vw;
+        opacity: 0.8;
+      }
+
+      .c5 .cloud {
+        transform: scale(0.8);
+      }
+
+      /*
+        Variable speed, opacity, and position of clouds for realistic effect
+        Speed will also be proportional to the size and opacity
+        The higher the speed, the lower the time in 's' = seconds
+      */
+
+      .c1 {
+        animation: moveclouds 15s linear infinite;
+      }
+
+      .c2 {
+        animation: moveclouds 25s linear infinite;
+      }
+
+      .c3 {
+        animation: moveclouds 20s linear infinite;
+      }
+
+      .c4 {
+        animation: moveclouds 18s linear infinite;
+      }
+
+      .c5 {
+        animation: moveclouds 20s linear infinite;
+      }
+
+      .cloud-wrapper {
+        position: absolute;
+      }
+
+      .cloud-wrapper:hover {
+        animation-play-state: paused;
+      }
+
+      .cloud-wrapper:hover .cloud,
+      .cloud-wrapper:hover .cloud::before,
+      .cloud-wrapper:hover .cloud::after {
+        background: darkslategrey;
+        box-shadow: 0 0 25px 0 darkslategrey;
+      }
+
+      @keyframes moveclouds {
+        0% {
+          transform: translateX(150vw)
+        }
+        100% {
+          transform: translateX(-150vw)
+        }
+      }
+
+      /* Bonus 2 */
+
+      .cloud-wrapper::before,
+      .cloud-wrapper::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        width: 16px;
+        height: 16px;
+        border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+        background: #81D4FA;
+        opacity: 0;
+      }
+
+      .cloud-wrapper::after {
+        left: 100px;
+      }
+
+      .cloud-wrapper:hover::before,
+      .cloud-wrapper:hover::after {
+        animation: drops 800ms linear infinite;
+      }
+
+      .cloud-wrapper:hover::before {
+        animation-delay: 400ms;
+      }
+
+      @keyframes drops {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(50vh);
+          opacity: 0.2;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="cloud-wrapper c1">
+      <div class="cloud"></div>
+    </div>
+    <div class="cloud-wrapper c2">
+      <div class="cloud"></div>
+    </div>
+    <div class="cloud-wrapper c3">
+      <div class="cloud"></div>
+    </div>
+    <div class="cloud-wrapper c4">
+      <div class="cloud"></div>
+    </div>
+    <div class="cloud-wrapper c5">
+      <div class="cloud"></div>
+    </div>
+
+  </body>
+
+</html>
+
+<!--
+
+Recreate the design and the features in the video "100-cloudy-day-preview.mp4"
+
+1. Create a linear gradient from top top bottom to represent the sky.
+   From color #c9dbe9 to color #fff
+
+2. Add a repeating grass at the bottom of the page using the "grass.png" image.
+
+3. Create a cloud element using only HTML + CSS.
+   Cloud color should be white (Try to create it in the most efficient way)
+
+4. Duplicate the cloud 5 times.
+   Change the initial position of each cloud.
+   Change the size and the opacity (60%-90% Size and opacity proportionally) of each one
+   to represent the distance effect.
+
+5. Add shadow (the same color as the clouds) to each cloud to enhance the distance illusion
+   and make them look blurry. (25px blur radius)
+
+6. Add an infinite animation to the clouds to create an animation loop.
+
+7. Add Hover state to each cloud that will stop its movement and change it's color to:
+   `darkslategrey`
+   The color change must `transition` smoothly
+
+-------------------------------------------------------------------------------
+Bonus 1:
+- Update your code based on performance best practices:
+https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
+
+Bonus 2:
+- On cloud hover, make it rain 2 "teardrops"
+
+-->
