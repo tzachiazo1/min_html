@@ -1,0 +1,21 @@
+{
+  "name": "kickstart-2017",
+  "version": "1.0.0",
+  "description": "An extensive Front-End Bootcamp at Wix Academy.",
+  "scripts": {
+    "lintmd": "check-all-markdown . --no-check-links"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wix-private/kickstart-2017.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/wix-private/kickstart-2017/issues"
+  },
+  "homepage": "https://github.com/wix-private/kickstart-2017#readme",
+  "private": true,
+  "devDependencies": {
+    "check-all-markdown": "1.3.0"
+  }
+}
