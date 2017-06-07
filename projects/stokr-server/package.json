@@ -1,14 +1,18 @@
 {
   "name": "stokr-server",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A stunning stock express server forwarding requests to Yahoo! Finance API",
   "main": "index.js",
+  "bin": {
+    "stokr-server": "./index.js"
+  },
   "scripts": {
-    "test": "test"
+    "test": ":"
   },
   "author": "itaibd@wix.com",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.3",
     "express": "^4.15.3",
     "yahoo-finance-data": "^2.0.0"
   }

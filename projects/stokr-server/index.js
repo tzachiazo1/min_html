@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const YahooFinanceAPI = require('yahoo-finance-data').default;
 const express = require('express');
 const symbols = require('./symbols').default;
