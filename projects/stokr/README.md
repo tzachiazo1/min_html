@@ -147,26 +147,55 @@ As a first step, use the data structures below.
 ]
 ```
 
+#### Stokr-Server
+
+To get the required information about symbols and stock, we use the Yahoo finance platform. We've created a Node Express server that simplifies Yahoo's API.
+
+Install the server
+
+```
+npm i -g stokr-server
+```
+
+Run the server (will run locally on port 7000)
+
+```
+stokr-server
+```
+
 #### API
 
-To get the required information about symbols and stock, we use the Yahoo finance platform. Yahoo introduces `YQL` (Yahoo Query Language) which is very similar to SQL, but used in this platform. Data returns in JSON format.
+##### Search Symbol
+Search a quote (stock) symbol by company name or any free text
 
-There are two APIs we're going to use.
+* **URL** /search
+* **Method:** `GET`
+*  **URL Params**
+   **Required:**
+   `q=[string]` - search query
+* **Success Response:**
+  * **Code:** 200 <br />
+  * **Content:**
+  ```JSON
+  {"ResultSet":{"Query":"GOOG","Result":[{"symbol":"GOOG","name":"Alphabet Inc.","exch":"NMS","type":"S","exchDisp":"NASDAQ","typeDisp":"Equity"},{"symbol":"GOOGL","name":"Alphabet Inc.","exch":"NAS","type":"S","exchDisp":"NASDAQ","typeDisp":"Equity"},{"symbol":"GOOGL-USD.SW","name":"Alphabet","exch":"EBS","type":"S","exchDisp":"Swiss","typeDisp":"Equity"},{"symbol":"GOOGL170609C01000000","name":"GOOGL Jun 2017 call 1000.000","exch":"OPR","type":"O","exchDisp":"OPR","typeDisp":"Option"},{"symbol":"GOOG190118C01000000","name":"GOOG Jan 2019 call 1000.000","exch":"OPR","type":"O","exchDisp":"OPR","typeDisp":"Option"},{"symbol":"GOOG170609C00985000","name":"GOOG Jun 2017 call 985.000","exch":"OPR","type":"O","exchDisp":"OPR","typeDisp":"Option"},{"symbol":"GOOG170609C00980000","name":"GOOG Jun 2017 call 980.000","exch":"OPR","type":"O","exchDisp":"OPR","typeDisp":"Option"},{"symbol":"GOOG170609C00982500","name":"GOOG Jun 2017 call 982.500","exch":"OPR","type":"O","exchDisp":"OPR","typeDisp":"Option"},{"symbol":"GOOG170609P00960000","name":"GOOG Jun 2017 put 960.000","exch":"OPR","type":"O","exchDisp":"OPR","typeDisp":"Option"},{"symbol":"GOOGL.SN","name":"Alphabet Inc.","exch":"SGO","type":"S","exchDisp":"Santiago Stock Exchange","typeDisp":"Equity"}]}}
+  ```
+* **Sample Call:** `/search?q=google`
 
-First one we use will be to retrieve the data for all the required stocks (by their symbols)
+##### Get quote (stock) details by symbol
+Get quotes information by symbol
 
-`
-https://query.yahooapis.com/v1/public/yql?q=select * from yahoo.finance.quotes where symbol in ("YHOO", "MSFT")&format=json&env=store://datatables.org/alltableswithkeys`
-
-Second one we will use will be to retrieve possible symbols (by a partial/full symbol search, for example "YHO" instead of "YHOO")
-
-//TODO - this isn't working yet
-`https://query.yahooapis.com/v1/public/yql?q=select * from pm.finance.autocomplete where auto_complete_str ="YHO"&format=json&env=store://datatables.org/alltableswithkeys`
-
-More about YQL:
-1. Guide: https://developer.yahoo.com/yql/guide/
-2. Playground https://developer.yahoo.com/yql/console/#h=select+*+from+pm.finance.autocomplete+where+auto_complete_str++%3D%22YHO%22
-
+* **URL** /quotes
+* **Method:** `GET`
+*  **URL Params**
+   **Required:**
+   `q=[string]` - Comma seperated symbols
+* **Success Response:**
+  * **Code:** 200 <br />
+  * **Content:**
+  ```JSON
+  {"query":{"count":2,"created":"2017-06-07T15:19:22Z","lang":"en-US","diagnostics":{"publiclyCallable":"true","url":{"execution-start-time":"8","execution-stop-time":"16","execution-time":"8","content":"http://api.finance.yahoo.com:4080/v1/quote/symbol/GOOG%2CWIX?view=detail&format=xml"},"javascript":{"execution-start-time":"5","execution-stop-time":"19","execution-time":"14","instructions-used":"2502","table-name":"pm.finance"},"user-time":"20","service-time":"8","build-version":"2.0.137"},"results":{"quote":[{"symbol":"GOOG","Name":"Alphabet Inc.","Symbol":"GOOG","Open":"979.649963","DaysHigh":"984.140015","DaysLow":"977.260010","MarketCapitalization":"683.555B","YearHigh":"988.250000","YearLow":"663.284000","Volume":"511997","AverageDailyVolume":"-","PERatio":"33.063560","LastTradePriceOnly":"978.450012","Change":"1.880005","realtime_price":"978.450012","realtime_change":"1.880005","realtime_chg_percent":"0.192511","eps_curr_year":"29.593000","realtime_ts":"6 07 2017 15:19:00 GMT","ts":"6 07 2017 15:19:00 GMT"},{"symbol":"WIX","Name":"Wix.com Ltd.","Symbol":"WIX","Open":"77.750000","DaysHigh":"79.500000","DaysLow":"77.449997","MarketCapitalization":"3.591B","YearHigh":"86.150000","YearLow":"26.310000","Volume":"411468","AverageDailyVolume":"-","PERatio":null,"LastTradePriceOnly":"79.000000","Change":"1.250000","realtime_price":"79.000000","realtime_change":"1.250000","realtime_chg_percent":"1.607717","eps_curr_year":"-1.110000","realtime_ts":"6 07 2017 15:18:01 GMT","ts":"6 07 2017 15:18:01 GMT"}]}}}
+  ```
+* **Sample Call:** `/quotes?q=GOOG,WIX`
 
 ### Storing data
 You should use the `LocalStorage` mechanism to save your favorite stocks and their order.
