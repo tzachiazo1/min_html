@@ -173,17 +173,17 @@ You should use the `LocalStorage` mechanism to save your favorite stocks and the
 When the app start - use the data from the `LocalStorage`. If there isn't data there, use the "Stocks Symbol List" data defined previously.
 
 
-### Bonus Section
-#### Animations
+## Bonus Section
+### Animations
 * When moving between screens.
 * When list items appear.
 
-#### Stocks List
+### Stocks List
 * Filter the stocks in the Stocks List screen without clicking on the apply button (on-the-fly filtering)
 
-#### Add Stocks Page
+### Add Stocks Page
 * Search for stocks withouth clicking on the search button (on-the-fly filtering). Beware from making multiple HTTP requests.
 
-#### Stock Detail Page (Bonus)
+### Stock Detail Page (Bonus)
 This screen is up to you to implement. It should display additional data of a specific stock.
 For example, latest news about the stack / more numerical data / change graph, etc... Go wild!
