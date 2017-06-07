@@ -157,7 +157,7 @@ Install the server
 npm i -g stokr-server
 ```
 
-Run the server (will run locally on port 7000)
+Run the server (will run on `http://localhost:7000`)
 
 ```
 stokr-server
