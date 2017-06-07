@@ -181,9 +181,8 @@ When the app start - use the data from the `LocalStorage`. If there isn't data t
 #### Stocks List
 * Filter the stocks in the Stocks List screen without clicking on the apply button (on-the-fly filtering)
 
-## Add Stocks Page
+#### Add Stocks Page
 * Search for stocks withouth clicking on the search button (on-the-fly filtering). Beware from making multiple HTTP requests.
-
 
 #### Stock Detail Page (Bonus)
 This screen is up to you to implement. It should display additional data of a specific stock.
