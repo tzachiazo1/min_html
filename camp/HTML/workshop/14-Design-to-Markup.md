@@ -1,4 +1,4 @@
-Design to Markup
-=================
+Exercise
+=========
 
-- [Exercise](/camp/HTML/exercises/03-Design-To-Markup)
+- [Design to Markup](../exercises/03-Design-To-Markup/README.md)
