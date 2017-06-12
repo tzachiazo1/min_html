@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<style>
+  /*
+    Apply a natural box layout model to all elements
+    But allowing an overwrite for components
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  */
+
+  /* Uncomment this section to apply border-box to all elements */
+  /*
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  */
+
+  .box {
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 20px solid grey;
+    margin: 20px;
+  }
+
+  .b-box {
+    box-sizing: border-box;
+  }
+</style>
+
+<div class="box"></div>
+<div class="box b-box"></div>
+
+
+<!--
+  Inspect the elements in DevTools to see the differences.
+-->

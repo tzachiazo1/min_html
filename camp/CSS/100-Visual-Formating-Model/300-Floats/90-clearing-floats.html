@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<style>
+  nav {
+    background-color: bisque;
+    border: 1px solid red;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    /*float: left;*/
+    margin: 15px;
+  }
+
+  aside {
+    background-color: deepskyblue;
+    /*float: left;*/
+    width: 200px;
+  }
+
+  article {
+    background-color: coral;
+    /*float: right;*/
+    width: 300px;
+  }
+
+  .clear {
+    clear: both;
+  }
+</style>
+
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <!--<div class="clear"></div>-->
+</nav>
+
+<section>
+  <aside>
+    <h2>Aside</h2>
+    <p>Clearing is necessary if floated items can be taller than non-floated content</p>
+  </aside>
+
+  <article>
+    <h2>I'ma Article Yeah!</h2>
+    <p>Clearing is necessary if all children are floating</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque ipsa officiis possimus? Architecto aspernatur ea eum id illo ipsa libero, maiores molestiae molestias quaerat quod ratione repudiandae totam voluptates?</p>
+  </article>
+
+  <!--<div class="clear"></div>-->
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis corporis
+    deserunt, doloremque eligendi enim illum inventore laborum laudantium maxime nihil quidem
+    reprehenderit vitae! Adipisci asperiores at eum officia suscipit!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis corporis
+    deserunt, doloremque eligendi enim illum inventore laborum laudantium maxime nihil quidem
+    reprehenderit vitae! Adipisci asperiores at eum officia suscipit!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis corporis
+    deserunt, doloremque eligendi enim illum inventore laborum laudantium maxime nihil quidem
+    reprehenderit vitae! Adipisci asperiores at eum officia suscipit!</p>
+</section>
+
+<!--
+  - Comment out the `float` props one by one to see the floating effect
+  - Comment out the .clear div's to contain floats
+
+  Manual clearing
+  - Requires an empty element
+  - Might be overlooked when changing the HTML
+
+  Alternatives:
+  - `overflow: auto` on the wrapping element
+  - `clearfix` class: next example...
+-->

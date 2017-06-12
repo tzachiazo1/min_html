@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Z7</title>
+</head>
+
+<body>
+  <h1>Seven possible levels of stacking context</h1>
+  <ol>
+    <li>
+      <strong>Background and borders</strong> — of the element forming the stacking context. The lowest level in the stack.</li>
+    <li>
+      <strong>Negative Z-Index</strong> — the stacking contexts of descendants elements with negative z-index.</li>
+    <li>
+      <strong>Block Level Boxes</strong> — in-flow non-inline-level non-positioned descendants.</li>
+    <li>
+      <strong>Floated Boxes</strong> — non-positioned floats</li>
+    <li>
+      <strong>Inline Boxes</strong> — in-flow inline-level non-positioned descendants.</li>
+    <li>
+      <strong>Z-index: 0</strong> — positioned elements. These form new stacking contexts.</li>
+    <li>
+      <strong>Positive Z-index</strong> — positioned elements. The highest level in the stack.</li>
+  </ol>
+
+  <img src="stacking-order1.png" alt="CSS stacking order">
+
+</body>
+
+</html>
+
+<!--
+Source:
+https://webdesign.tutsplus.com/articles/what-you-may-not-know-about-the-z-index-property--webdesign-16892
+
+Usages:
+https://www.smashingmagazine.com/2009/09/the-z-index-css-property-a-comprehensive-look/#showcase-of-various-usage
+-->

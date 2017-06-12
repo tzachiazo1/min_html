@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<style>
+  div {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+  }
+
+  .outer {
+    height: 1000px;
+    width: 300px;
+    background-color: coral;
+  }
+
+  .inner {
+    height: 75px;
+    width: 75px;
+    background-color: deepskyblue;
+    position: relative;
+    top: 60px;
+    left: 60px;
+  }
+</style>
+
+<div class="outer">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur
+    consequuntur expedita fuga iusto modi, molestias nam nemo numquam officiis porro praesentium
+    quaerat quia quisquam sint ullam vel vitae.</p>
+
+  <div class="inner"></div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur
+    consequuntur expedita fuga iusto modi, molestias nam nemo numquam officiis porro praesentium
+    quaerat quia quisquam sint ullam vel vitae.</p>
+</div>
+
+<!--
+  We should use position `relative` only for setting a reference point
+  and not for moving the element, due to the confusion it creates:
+  - Layout properties still apply on the rouge element and interact with
+    the elements around it (display/margin/padding/width/height)
+  - It's confusing for the developer who's debugging the code
+-->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<style>
+  p {
+    color: deeppink;
+  }
+
+  .intro {
+    color: deepskyblue;
+  }
+
+  #header {
+    color: forestgreen;
+  }
+
+  .imp {
+    color: orangered !important;
+  }
+
+  .article p.intro {
+    color: darkslateblue;
+  }
+</style>
+
+<h1>The priority of a selector (specificity)</h1>
+
+<p>p { color: #fff; } -> 0,0,0,1 </p>
+<p class="intro"> .intro { color: #98c7d4; } -> 0,0,1,0</p>
+<p id="header" class="intro">#header { color: #444245; } -> 0,1,0,0</p>
+<p style="color: orange;">Inline style -> 1,0,0,0</p>
+<p style="color: orange;" class="imp">!important is EVIL!</p>
+<div class="article">
+  <p class="intro">.article p.intro { color: #fff; } -> 0,0,2,1</p>
+</div>

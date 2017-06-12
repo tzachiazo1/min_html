@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  div {
+    float: left;
+    width: 250px;
+    height: 250px;
+    font-size: 3rem;
+    background-color: coral;
+    border: 2px solid black;
+  }
+
+  .tall {
+    height: 500px;
+  }
+</style>
+
+<div class="tall">
+  1
+</div>
+
+<div>
+  2
+</div>
+
+<div>
+  3
+</div>
+
+<!--
+Resize the screen to see the reflow.
+
+- Floated elements stack up to the parent edge,
+  and then move down to the next available edge.
+
+- Take care with elements that have different heights - the first available edge
+  isn't always below
+-->

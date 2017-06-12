@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+  <style>
+    .text-color {
+      color: red;
+      font-weight: bold;
+    }
+
+    .text-color {
+      color: green;
+    }
+  </style>
+</head>
+
+<p class="text-color">This is red</p>
+<p class="text-color">This is also red</p>
+
+<!--
+  Cascade Order -
+  Priority is also dependent on position in document.
+  The second color definition for `.red` overrides the first.
+
+  Non-conflicting properties will be combined.
+-->

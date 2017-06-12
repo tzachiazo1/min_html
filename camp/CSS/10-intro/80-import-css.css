@@ -1,0 +1,13 @@
+/* Accepts a URL as an absolute or relative path (relative to the current stylesheet) */
+@import url(80-imported-css.css);
+/*
+  Equivalent to:
+  @import url('83-imported-css.css');
+  @import '83-imported-css.css';
+*/
+
+p {
+  color: red;
+}
+
+/* Tip: Not recommended, prevents parallel downloads, use <link> tags instead */

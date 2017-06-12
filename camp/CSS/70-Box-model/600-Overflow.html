@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<style>
+  .outer {
+    width: 200px;
+    height: 150px;
+    border: 2px solid red;
+    margin: 60px;
+  }
+
+  .box {
+    width: 250px;
+    height: 50px;
+    background-color: aquamarine;
+  }
+
+  .visible {
+    /*  the default value, which allows content to extend beyond container boundaries */
+    overflow: visible;
+  }
+
+  .auto {
+    /*  adds a scrollbar as needed when content overfows  */
+    overflow: auto;
+  }
+
+  .hidden {
+    /*  hides content that extends beyond the container  */
+    overflow: hidden;
+  }
+
+  .scroll {
+    /*  adds a scrollbar at all times, even if unneeded  */
+    overflow: scroll;
+  }
+
+  .x-y {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+</style>
+
+<div class="outer visible">
+  <div class="box">Visible</div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo libero accusantium voluptatem at soluta! Repellat, distinctio. Quam tenetur dolor ipsum adipisci doloribus odio earum, perferendis illo odit, nostrum, est quia!
+</div>
+
+<div class="outer auto">
+  <div class="box">Auto</div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo libero accusantium voluptatem at soluta! Repellat, distinctio. Quam tenetur dolor ipsum adipisci doloribus odio earum, perferendis illo odit, nostrum, est quia!
+</div>
+
+<div class="outer hidden">
+  <div class="box">Hidden</div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo libero accusantium voluptatem at soluta! Repellat, distinctio. Quam tenetur dolor ipsum adipisci doloribus odio earum, perferendis illo odit, nostrum, est quia!
+</div>
+
+<div class="outer scroll">
+  <div class="box">Scroll</div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo libero accusantium voluptatem at soluta! Repellat, distinctio. Quam tenetur dolor ipsum adipisci doloribus odio earum, perferendis illo odit, nostrum, est quia!
+</div>
+
+<div class="outer x-y">
+  <div class="box">X hidden Y auto</div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo libero accusantium voluptatem at soluta! Repellat, distinctio. Quam tenetur dolor ipsum adipisci doloribus odio earum, perferendis illo odit, nostrum, est quia!
+</div>

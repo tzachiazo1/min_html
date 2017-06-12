@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<style>
+  /* draw any selected text yellow on red background */
+  ::-moz-selection {
+    color: gold;
+    background: red;
+  }
+
+  ::selection {
+    color: gold;
+    background: red;
+  }
+
+  /* draw selected text in a paragraph white on black */
+  p::-moz-selection {
+    color: white;
+    background: black;
+  }
+
+  p::selection {
+    color: white;
+    background: black;
+  }
+</style>
+
+<div>This is some text for you to test CSS's ::selection pseudo-class.</div>
+<p>Also try to select some text in this &lt;p&gt;</p>

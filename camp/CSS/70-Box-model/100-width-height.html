@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<style>
+  /* Try to change the width / height / font-size  of the DIV */
+
+  div {
+    background-color: lightblue;
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
+  }
+
+  p {
+    background-color: lightcoral;
+  }
+
+  p.percentage {
+    /* % - Relative to the parent’s height or width respectively */
+    width: 50%;
+    height: 50%;
+  }
+
+  p.ems {
+    /* em - Relative to the current element’s font-size */
+    width: 5em;
+    height: 5em;
+  }
+</style>
+
+<div>
+  <p class="percentage">some text</p>
+</div>
+
+<div>
+  <p class="ems">some text</p>
+</div>
+
+
+
+<!--
+  - Fixed size ( px )
+  - Dynamic size ( em , % )
+
+  Interactive demo:
+  - http://codepen.io/carolineartz/full/ogVXZj/
+-->
