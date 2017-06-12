@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tree-View</title>
+
+  <style>
+    .treeview ul,
+    .treeview li {
+      padding: 0;
+      margin: 3px 0;
+    }
+
+    .treeview {
+      font: normal 11px Arial, Sans-serif;
+      user-select: none;
+    }
+
+    .treeview a {
+      text-decoration: none;
+    }
+
+    .treeview a:hover {
+      text-decoration: underline;
+    }
+
+    .treeview input + label + ul {
+      margin: 0 0 0 22px;
+    }
+
+    /* Bonus */
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="treeview">
+    <ul>
+      <li>
+        <input type="checkbox" id="item-0" />
+        <label for="item-0">This Treeview...</label>
+        <ul>
+          <li>
+            <input type="checkbox" id="item-0-1" />
+            <label for="item-0-1">Does Not Use Any JavaScript...</label>
+            <ul>
+              <li><a href="file.json">Some code file</a></li>
+              <li><a href="file2.json">Another code file</a></li>
+              <li><a href="cat4.png">A cat image</a></li>
+            </ul>
+          </li>
+          <li><a href="cat.png">Another Cat image</a></li>
+          <li><a href="cat2.png">Cat image again</a></li>
+          <li><a href="file3.json">Code file</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="item-1" disabled="disabled" />
+        <label for="item-1">Disabled Folder</label>
+        <ul>
+          <li><a href="http://google.com">Google</a></li>
+          <li><a href="http://facebook.com">Facebook</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
+
+<!--
+  Create a treeview using only CSS.
+  (Do not modify the HTML)
+
+  Expected result: "assets/techniques/tree-view-preview.mp4"
+
+  Bonus: change file types according to the file type link
+  .png files will get "document-image"
+  .json files will get "document-code"
+-->

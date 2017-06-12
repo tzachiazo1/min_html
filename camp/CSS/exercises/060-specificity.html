@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Specificity</title>
+
+  <style>
+    .main li a {
+      color: #333;
+    }
+
+    /*  Fix the code that the active anchor will be red  */
+    .active a {
+      color: red;
+    }
+
+    .foot p {
+      font-size: 10px;
+    }
+
+    /*  Fix the code that the big text will be big  */
+    .big-text {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="main">
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="content">
+
+  </section>
+  <footer class="foot">
+    <p>Paragraph inside a footer</p>
+    <p class="big-text">Another Paragraph inside a footer</p>
+  </footer>
+
+</body>
+
+</html>
+
+<!--
+Requirements:
+- Do not touch the HTML
+- Do delete anything
+- Do not reorder the CSS
+-->

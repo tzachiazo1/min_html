@@ -17,21 +17,6 @@
       list-style: none;
     }
 
-    .tabstrip,
-    .tabstrip input[type="radio"]:checked + label {
-      position: relative;
-    }
-
-    .tabstrip li,
-    .tabstrip input[type="radio"] + label {
-      display: inline-block;
-    }
-
-    .tabstrip li > div,
-    .tabstrip input[type="radio"] {
-      position: absolute;
-    }
-
     .tabstrip li > div,
     .tabstrip input[type="radio"] + label {
       border: solid 1px #ccc;
@@ -40,14 +25,6 @@
     .tabstrip {
       font: normal 11px Arial, Sans-serif;
       color: #404040;
-    }
-
-    .tabstrip li {
-      vertical-align: top;
-    }
-
-    .tabstrip li:first-child {
-      margin-left: 8px;
     }
 
     .tabstrip li > div {
@@ -67,33 +44,7 @@
       line-height: 32px;
       background: #f1f1f1;
       text-align: center;
-      border-radius: 5px 5px 0 0;
       cursor: pointer;
-      user-select: none;
-    }
-
-    .tabstrip input[type="radio"]:checked + label {
-      z-index: 1;
-      background: #fff;
-      border-bottom-color: #fff;
-      cursor: default;
-    }
-
-    .tabstrip input[type="radio"] {
-      opacity: 0;
-    }
-
-    .tabstrip input[type="radio"] ~ div {
-      display: none;
-    }
-
-    .tabstrip input[type="radio"]:checked:not(:disabled) ~ div {
-      display: block;
-    }
-
-    .tabstrip input[type="radio"]:disabled + label {
-      opacity: .5;
-      cursor: no-drop;
     }
   </style>
 </head>
