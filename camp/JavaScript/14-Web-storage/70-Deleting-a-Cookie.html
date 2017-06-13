@@ -1,0 +1,10 @@
+<script>
+  // To delete a cookie, just set the expiry date to a time in the past.
+  var now = new Date();
+
+  // Setting expiry date to one month behind the current date.
+  now.setMonth(now.getMonth() - 1);
+
+  document.cookie = "name2=John Doe" + ";expires=" + now.toUTCString() + ";"
+
+</script>

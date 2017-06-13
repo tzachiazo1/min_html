@@ -1,0 +1,17 @@
+<script src="../../assets/jquery.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('input').on('keydown', function (event) {
+      // this: The element on which the event handler was bound.
+      // event: The event object.
+
+      // Change the input element's background to red if backspace was
+      // pressed, otherwise green.
+      $(this).css('background', event.which === 8 ? 'red' : 'green');
+    });
+  });
+
+</script>
+
+<input type="text" value="John">

@@ -1,0 +1,19 @@
+<script>
+  /**
+   * Most browsers have implemented at least the w3c recommended
+   * maximum storage limit of 5MB
+   */
+
+  const key   = 'appData';
+  const value = 'some cool data';
+
+  try {
+    localStorage.setItem(key, value);
+  }
+  catch (e) {
+    if (e.code == 22) {
+      // Storage full, maybe notify user or do some clean-up
+    }
+  }
+
+</script>

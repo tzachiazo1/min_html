@@ -1,0 +1,31 @@
+<p>This is just a P</p>
+<div>And here is a div</div>
+<p>This is just another P</p>
+
+<script>
+  /**
+   * When element is clicked, adds a red border
+   */
+  function clickHandler(e) {
+    console.log('Listener of:', e.currentTarget.nodeName);
+
+    // Always true
+    console.log(this === e.currentTarget);
+    // true only when `currentTarget` and `target` are the same object
+    console.log(this === e.target);
+
+    this.style.border = '1px solid red';
+
+    // NOTE: uncomment this to prevent bubbling
+    // e.stopPropagation();
+  }
+
+  // Get a list of every element in the document
+  const elements = document.querySelectorAll('*');
+
+  // Add `clickHandler` as a click listener so when the
+  // element is clicked on, it gets a red border
+  for (const element of elements) {
+    element.addEventListener('click', clickHandler);
+  }
+</script>

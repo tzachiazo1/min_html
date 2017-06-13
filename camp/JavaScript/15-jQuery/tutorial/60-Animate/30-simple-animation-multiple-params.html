@@ -1,0 +1,29 @@
+<script src="../../assets/jquery.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $("button").click(function () {
+      $("div").animate({
+        left: '250px',
+        top: '250px',
+        width: '200px',
+        height: '250px;',
+        opacity: '0.5',
+      }, 1200);
+    });
+  });
+
+</script>
+
+<style>
+  div {
+    height: 100px;
+    width: 100px;
+    background-color: lightblue;
+    position: absolute;
+  }
+</style>
+
+<button>Animate The Box</button>
+
+<div></div>

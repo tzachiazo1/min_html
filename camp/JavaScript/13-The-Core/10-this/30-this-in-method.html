@@ -1,0 +1,23 @@
+<script>
+  const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+
+    /**
+     * `this` inside a method execution will reference the Object that was the context
+     * of the execution.
+     *
+     * Ninja Tip:
+     * `this` will be whatever is on the left of the dot `.`
+     */
+    getFullName: function () {
+      console.log(this.firstName + ' ' + this.lastName); // John doe
+
+      // We could have also written this:
+      // console.log(person.firstName + ' ' + person.lastName);
+    }
+  };
+
+  person.getFullName();
+
+</script>

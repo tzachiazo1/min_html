@@ -1,0 +1,14 @@
+<script>
+  /**
+   * `const` and `let` are not added to the `window` object
+   */
+  const firstName = 'Peter';
+  const lastName  = 'Pan';
+
+  function getFullName() {
+    console.log(this.firstName + ' ' + this.lastName);
+  }
+
+  getFullName(); // undefined undefined
+
+</script>

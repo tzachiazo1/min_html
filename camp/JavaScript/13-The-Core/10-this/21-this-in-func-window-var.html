@@ -1,0 +1,14 @@
+<script>
+  var firstName = 'Peter';
+  var lastName  = 'Pan';
+
+  function getFullName() {
+    /**
+     * `this` inside the function will reference the `window` object​
+     */
+    console.log(this.firstName + ' ' + this.lastName);
+  }
+
+  getFullName(); // Peter Pan​
+
+</script>

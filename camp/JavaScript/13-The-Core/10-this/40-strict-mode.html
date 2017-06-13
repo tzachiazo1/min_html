@@ -1,0 +1,16 @@
+<script>
+  var firstName = 'Peter';
+  var lastName  = 'Pan';
+
+  function getFullName() {
+    'use strict';
+
+    /**
+     * In strict mode, `this` does not fall back to being `window`
+     */
+    console.log(this.firstName + ' ' + this.lastName);
+  }
+
+  getFullName(); // TypeError: Cannot read property 'firstName' of undefined
+
+</script>

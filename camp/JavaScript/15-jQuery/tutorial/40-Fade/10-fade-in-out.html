@@ -1,0 +1,48 @@
+<script src="../../assets/jquery.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $(".fade-in").click(function () {
+      $(".green-box").fadeIn();
+      $(".red-box").fadeIn("slow");
+      $(".blue-box").fadeIn(3000);
+    });
+
+    $(".fade-out").click(function () {
+      $(".green-box").fadeOut();
+      $(".red-box").fadeOut("fast");
+      $(".blue-box").fadeOut(3000);
+    });
+
+  });
+
+</script>
+
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+
+  .green-box {
+    background-color: limegreen;
+  }
+
+  .red-box {
+    background-color: indianred;
+  }
+
+  .blue-box {
+    background-color: dodgerblue;
+  }
+</style>
+
+
+<button class="fade-out">Fade Out</button>
+<button class="fade-in">Fade In</button>
+
+
+<div class="box green-box"></div>
+<div class="box red-box"></div>
+<div class="box blue-box"></div>

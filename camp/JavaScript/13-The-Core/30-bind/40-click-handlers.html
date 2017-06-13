@@ -1,0 +1,27 @@
+<button>click me!</button>
+
+<script>
+  const logger = {
+    counter: 0,
+    updateCount: function () {
+      this.counter++;
+
+      console.log(this.counter);
+    }
+  };
+
+  const btnElm = document.querySelector('button');
+
+  btnElm.addEventListener('click', function () {
+    logger.updateCount();
+  });
+
+  /**
+   * But we’ve had to create an unnecessary anonymous function
+   * to allow the `this` keyword to inside `updateCount()` to work.
+   */
+
+  // This could be neatened up, like so:
+  // btnElm.addEventListener('click', logger.updateCount.bind(logger));
+
+</script>

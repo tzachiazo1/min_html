@@ -1,0 +1,22 @@
+<script>
+  // var firstName = 'Peter';
+  // var lastName = 'Pan';
+
+  const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 32,
+    getFullName: () => {
+      /**
+       * `this` inside Arrow functions have the same context of the scope in which
+       * the Arrow function was defined
+       *
+       * In this case it's the scope of `person`, which is also `window`
+       */
+      console.log(this.firstName + ' ' + this.lastName); // undefined undefined
+    }
+  };
+
+  person.getFullName();
+
+</script>

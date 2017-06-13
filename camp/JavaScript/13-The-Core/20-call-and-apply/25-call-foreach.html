@@ -1,0 +1,20 @@
+<ul>
+  <li>List item number 01</li>
+  <li>List item number 02</li>
+  <li>List item number 03</li>
+  <li>List item number 04</li>
+</ul>
+
+<script>
+  // Returns an HtmlCollection
+  const liElms = document.getElementsByTagName('li');
+
+  /**
+   * We can call native methods and serve them a specific context for `this`
+   * `forEach` uses `this` as part of it's implementation, so we can trick it
+   * to run on an HtmlCollection which does not support `forEach` by itself
+   */
+  Array.prototype.forEach.call(liElms, (li, index) => {
+    li.style.color = 'red';
+  });
+</script>

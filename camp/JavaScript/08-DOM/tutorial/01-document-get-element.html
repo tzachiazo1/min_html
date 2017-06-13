@@ -1,0 +1,56 @@
+<form>
+  <label>
+    Name:
+    <input type="text" name="first-name" placeholder="First name">
+  </label>
+  <label>
+    Year of birth:
+    <input type="number" min="1900" class="year-of-birth" name="yearOfBirth" placeholder="Year">
+  </label>
+  <label>
+    <textarea id="sly" placeholder="Sly comment"></textarea>
+  </label>
+  <button type="submit">Submit</button>
+</form>
+<script>
+
+  document.querySelector('form input[name="first-name"]')
+    .addEventListener('blur', (ev) => {
+      const elm = ev.target;
+
+      if (!elm.value) {
+        console.error('Name must not be empty');
+      }
+    });
+
+  document.getElementsByClassName('year-of-birth')[0]
+    .addEventListener('blur', (ev) => {
+      const yearOfBirth = parseInt(ev.target.value);
+      if (yearOfBirth < 1900 || yearOfBirth > 2017) {
+        console.error('Date looks too old or too new');
+      }
+    });
+
+  document.getElementById('sly')
+    .addEventListener('blur', (ev) => {
+      if (ev.target.value.split(' ').length > 4) {
+        console.error('Sly comments should be short...');
+      }
+    });
+
+  document.getElementsByTagName('form')[0]
+    .addEventListener('submit', (ev) => {
+      console.info('go go go!');
+    });
+</script>
+
+<!--
+  * document.getElementById
+  * document.getElementByTagName
+  * document.getElementByClassName
+  * document.querySelector[All]
+  *
+  * addEventListener
+  * Event.preventDefault()
+  * Event.target
+-->

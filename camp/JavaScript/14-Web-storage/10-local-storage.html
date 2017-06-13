@@ -1,0 +1,11 @@
+<script>
+  localStorage.setItem('favoriteflavor', 'vanilla');
+
+  const taste = localStorage.getItem('favoriteflavor');
+  console.log(taste); // "vanilla"
+
+  localStorage.removeItem('favoriteflavor');
+
+  console.log(localStorage.getItem('favoriteflavor')); // null
+
+</script>

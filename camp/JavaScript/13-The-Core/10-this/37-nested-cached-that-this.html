@@ -1,0 +1,22 @@
+<script>
+  const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 32,
+    getFullName: function () {
+      const that = this;
+
+      console.log(that.firstName + ' ' + that.lastName); // John Doe
+
+      function showAge() {
+        console.log(that); // person
+        console.log(that.age); // 32
+      }
+
+      showAge();
+    }
+  };
+
+  person.getFullName();
+
+</script>

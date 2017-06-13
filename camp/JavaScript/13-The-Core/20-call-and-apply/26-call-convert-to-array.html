@@ -1,0 +1,20 @@
+<ul>
+  <li>List item number 01</li>
+  <li>List item number 02</li>
+  <li>List item number 03</li>
+  <li>List item number 04</li>
+</ul>
+
+<script>
+  // Returns an HtmlCollection
+  const liElms = document.getElementsByTagName('li');
+
+  /**
+   * Convert into an Array:
+   * `slice` always returns a new Array
+   * If we don't pass the start/end arguments it will just copy the whole Array
+   */
+  const liElmsArr = Array.prototype.slice.call(liElms);
+
+  console.log(liElmsArr); // Array[4]
+</script>

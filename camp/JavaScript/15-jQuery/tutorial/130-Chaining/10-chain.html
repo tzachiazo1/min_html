@@ -1,0 +1,25 @@
+<script src="../../assets/jquery.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('li')
+      .click(function () {
+        $(this)
+          .addClass('clicked')
+          .find('span')
+          .css('color', 'blue');
+      })
+  });
+
+</script>
+
+<style>
+  li.clicked {
+    border: 2px solid red;
+  }
+</style>
+
+<ul>
+  <li><span>This is a span</span></li>
+  <li><span>This is a span</span></li>
+</ul>

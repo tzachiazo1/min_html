@@ -1,0 +1,19 @@
+<script>
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener('load', transferComplete);
+  xhr.addEventListener('error', transferFailed);
+
+  xhr.open('GET', 'https://www.google.com/foobar/');
+
+  xhr.send();
+
+  function transferComplete(evt) {
+    console.log('The transfer is complete.');
+  }
+
+  function transferFailed(evt) {
+    console.log('An error occurred while transferring the file.');
+  }
+
+</script>

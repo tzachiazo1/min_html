@@ -1,0 +1,23 @@
+<script>
+  const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 32,
+    getFullName: function () {
+      console.log(this.firstName + ' ' + this.lastName); // John doe
+
+      /**
+       * If we call the function directly, `this` is always `window`
+       */
+      function showAge() {
+        console.log(this); // window
+        console.log(this.age); // undefined
+      }
+
+      showAge();
+    }
+  };
+
+  person.getFullName();
+
+</script>

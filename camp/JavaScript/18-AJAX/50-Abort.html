@@ -1,0 +1,36 @@
+<script>
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener('progress', updateProgress);
+  xhr.addEventListener('load', transferComplete);
+  xhr.addEventListener('abort', transferCanceled);
+
+  xhr.open('GET', 'cat.jpg');
+
+  xhr.send();
+
+
+  // progress on transfers from the server to the client (downloads)
+  function updateProgress(e) {
+    if (e.lengthComputable) {
+      let percentComplete = e.loaded / e.total;
+      console.log(percentComplete);
+
+      // Aborting the request
+      xhr.abort();
+    } else {
+      // Unable to compute progress information since the total size is unknown
+    }
+  }
+
+
+
+  function transferComplete(evt) {
+    console.log('The transfer is complete.');
+  }
+
+  function transferCanceled(evt) {
+    console.log('The transfer has been canceled by the user.');
+  }
+
+</script>

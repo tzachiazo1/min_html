@@ -1,0 +1,16 @@
+<script>
+  const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 32,
+    getAge: function () {
+      // If the function is called directly, the `this` context is lost
+      console.log(this.age); // undefined
+    }
+  };
+
+  const getAge = person.getAge;
+
+  getAge();
+
+</script>

@@ -1,0 +1,22 @@
+<span class="box">Box 1</span>
+<span class="box">Box 2</span>
+<span class="box">Box 3</span>
+<span class="box">Box 4</span>
+<span class="box">Box 5</span>
+
+<script>
+
+  function changeColor(e) {
+    e.target.style.background = 'red';
+  }
+
+  /**
+   * There’s not really a way to natively add events to a NodeList as of yet.
+   * So, we end up stealing the forEach function from the Array.prototype to loop, like so:
+   */
+  const boxes = document.querySelectorAll('.box');
+
+  Array.prototype.forEach.call(boxes, (box) => {
+    box.addEventListener('click', changeColor);
+  });
+</script>

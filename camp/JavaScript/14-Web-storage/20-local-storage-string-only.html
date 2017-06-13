@@ -1,0 +1,17 @@
+<script>
+  const car = {
+    wheels: 4,
+    doors: 2,
+    sound: 'vroom',
+    name: 'Lightning McQueen',
+  };
+
+  console.log('This is our car: ', car);
+
+  localStorage.setItem('car', JSON.stringify(car));
+
+  const carData = JSON.parse(localStorage.getItem('car'));
+
+  console.log('This is our car taken from local-storage: ', carData);
+
+</script>
