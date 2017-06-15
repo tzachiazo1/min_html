@@ -73,6 +73,6 @@
     }
   },
   "eslintConfig": {
-    "extends": "wix/react"
+    "___DISABLED_ESLINT___extends": "wix/react"
   }
 }

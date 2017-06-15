@@ -5,7 +5,7 @@ import {mount} from 'enzyme';
 import i18next from 'i18next';
 import {I18nextProvider} from 'react-i18next';
 import App from './App';
-import translation from '../../assets/locale/messages_en.json';
+import translation from '../../../assets/locale/messages_en.json';
 
 const i18nData = {
   lng: 'en',
