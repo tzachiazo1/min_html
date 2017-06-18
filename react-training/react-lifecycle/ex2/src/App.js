@@ -14,7 +14,7 @@ class ListApp extends Component {
     super();
     this.state = {
       userInput: '',
-      items: Array(1000).fill(1).map((v, i) => `Item ${i}`)
+      items: Array(10000).fill(1).map((v, i) => `Item ${i+1}`)
     }
   }
 
