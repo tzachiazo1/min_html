@@ -4,10 +4,6 @@ import './App.css';
 
 class App extends Component {
 
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div className="App">
@@ -23,7 +19,7 @@ class App extends Component {
           </select>
         </div>
         
-        <TranslationBox targetLanguage="SomeLanguage" value="English term.." />
+        <TranslationBox targetLanguage="SomeLanguage" term="English term.." />
       </div>
     );
   }

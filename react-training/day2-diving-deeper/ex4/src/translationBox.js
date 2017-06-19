@@ -1,9 +1,19 @@
 import React from 'react';
 
+
+// You're not allowed to change this method
+const expensiveTranslate = (englishValue, targetLanguage) => {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function(){
+            resolve(`${englishValue} - [${targetLanguage}]`);
+        }, 2000);
+    });
+}
+
 /**
  * TranslationBox is a Component that takes 2 "props":
- * 1. value - An English value to translate
- * 2. targetLanguage - A language to translate the value to
+ * 1. term - An English value to translate
+ * 2. targetLanguage - A language to translate the term to
  * 
  * And displays the the translation inside a Box.
  */
@@ -15,23 +25,11 @@ class TranslationBox extends React.Component {
         this.state = {
             translation: '' // HINT
         };
-
-        this.expensiveTranslate = this.expensiveTranslate.bind(this);
     }
 
-    // TODO - You need to implmement "componentWillReceiveProps"
-    // componentWillReceiveProps(nextProps) {}
-
-    // You're not allowed to change this method
-    expensiveTranslate(englishValue, targetLanguage) {
-        new Promise(function(resolve, reject) {
-            setTimeout(resolve, 2000);
-        }).then(() => {
-            this.setState({
-                translation: `${englishValue} [${targetLanguage}]`
-            });
-        });
-    }
+    // componentWillReceiveProps(nextProps) {
+    // TODO - You need to implmement this function
+    // }
 
     render() {
         // TODO - Change the render function so it shows the translation without calling "expensiveTranslate"
