@@ -1,7 +1,7 @@
 # GIT Exercises
 Objectives: practice useful git commands and workflow.
 
-You can use this resources to extend your knowledge:
+You can use these resources to extend your knowledge:
 https://github.com/wix-private/server-training-kit/tree/master/content/Git%20and%20GitHub
 
 1. Basics
