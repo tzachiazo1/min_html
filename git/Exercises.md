@@ -43,6 +43,7 @@ https://github.com/wix-private/server-training-kit/tree/master/content/Git%20and
     5. create a new file
     6. commit
     7. rebase the branch to master
-9. (One person should create common repo for the whole class) - Kickstart 2017 - Restaurants around wix
-    1. create (and maintain) a repo for all the restaurants in the Namal
-    2. if you already ate there - add a review
+9. Kickstart 2017 - Restaurants around wix
+    1. clone the GIT repo: https://github.com/wix-private/kickstart17-restaurants
+    2. create (and maintain) a repo for all the restaurants in the Namal
+    3. if you already ate there - add a review
