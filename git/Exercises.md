@@ -5,7 +5,7 @@ Objectives: Practice useful git commands and workflow.
 Use these resources to extend your knowledge:
 https://github.com/wix-private/server-training-kit/tree/master/content/Git%20and%20GitHub
 
-Do the following steps one after the other (
+Do the following steps one after the other:
 
 1. Basics
     1. create a repo
