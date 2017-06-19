@@ -8,7 +8,7 @@ https://github.com/wix-private/server-training-kit/tree/master/content/Git%20and
     1. create a repo
     2. commit a file
     3. push
-2. amending changes
+2. Amending changes
     1. commit a new file
     2. commit
     3. change something in the file
@@ -20,22 +20,22 @@ https://github.com/wix-private/server-training-kit/tree/master/content/Git%20and
     3. commit and push
     4. make a pull request in github
     5. merge to master
-4. merging
+4. Merging
     1. before pulling latest changes
     2. make a change to the same file you edited in the previous step
     3. commit and push (it fails - why?)
     4. pull and handle conflicts (to accept both)
-5. statshing
+5. Stashing
     1. make a change and stash it.
     2. apply vs. pop pick one.
     3. make sure nothing is stashed.
-6. reset head
+6. Reset head
     1. make two commits
     2. reset the last commit without loosing (hard vs. soft)
-7. move head backward (using checkout)
+7. Move head backward (using checkout)
     1. go to the first commit
     2. return to latest commit
-8. rebase vs. merge
+8. Rebase vs. Merge
     1. create a new branch
     2. edit a file
     3. commit
@@ -43,3 +43,6 @@ https://github.com/wix-private/server-training-kit/tree/master/content/Git%20and
     5. create a new file
     6. commit
     7. rebase the branch to master
+9. (one should create common repo for the whole class) - Kickstart 2017 - Resturants around wix
+    1. create (and maintain) a repo for all the resturants
+    2. if you already ate there - add a review
