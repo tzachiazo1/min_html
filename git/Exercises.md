@@ -52,3 +52,5 @@ Do the following steps one after the other:
 1. clone the GIT repo: https://github.com/wix-private/kickstart17-restaurants
 2. maintain (add & edit to) the repo, all the restaurants in the Namal
 3. if you already ate there - add a review
+
+### Extra Credit - [Git Tutorial from GitHub](https://try.github.io/)
